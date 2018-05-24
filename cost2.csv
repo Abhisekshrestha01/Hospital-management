@@ -1,0 +1,9 @@
+TrDate,Patient_ID,TrName,Amount
+2017-12-01,2001,admission,500.0
+2017-12-06,2002,admission,500.0
+2017-12-06,2003,admission,500.0
+2017-12-06,2004,admission,500.0
+2017-12-06,2001,aspirin,23.0
+2017-12-06,2001,x ray,500.0
+2017-12-06,2002, cetamol,34.0
+2017-12-06,2003,Payment,-200.0

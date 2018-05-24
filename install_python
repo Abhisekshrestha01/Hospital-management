@@ -1,0 +1,15 @@
+#! /bin/sh
+mkdir ~/python
+cd ~/python
+wget https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
+tar xJf Python-3.6.2.tar.xz
+find ~/python -type d | xargs chmod 0755
+cd Python-3.6.2
+./configure --prefix=$HOME/python
+make && make install
+echo 'export PATH=$HOME/python/Python-3.6.2/:$PATH' >> ~/.bashrc
+echo 'export PYTHONPATH=$HOME/python/Python-3.6.2' >> ~/.bashrc
+source ~/.bashrc
+echo 'All Done!!'
+python -m easy_install pandas
+python -m easy_install pip

@@ -1,0 +1,5 @@
+PatientID,Name,Age,AdmissionDate,BedNum,Status,DischargeDate
+2001,p1,10,2017-12-01,101,1,
+2002,patient2,25,2017-12-06,102,0,
+2003,hari,23,2017-12-06,105,1,
+2004,shyam,80,2017-12-06,107,0,

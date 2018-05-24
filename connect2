@@ -1,0 +1,50 @@
+#! /bin/sh
+beta=140.158.130.245;
+sigma2=140.158.130.70;
+sigma3=140.158.130.33;
+sigma4=140.158.131.43;
+sigma5=140.158.130.40;
+sigma6=140.158.130.6;
+sigma7=140.158.130.20;
+sigma8=140.158.131.45;
+sigma9=140.158.130.14;
+sigma10=140.158.131.41;
+sigma23=140.158.131.40;
+sigma24=140.158.130.254;
+sigma25=140.158.130.22;
+sigma26=140.158.131.37;
+sigma27=140.158.130.13;
+sigma28=140.158.130.18;
+sigma29=140.158.130.27;
+sigma30=140.158.131.67;
+
+user=sshrestha22;
+pwd="Suy@sh1stha";
+
+destination=$1;
+
+case $destination in
+        beta) sshpass -p ${pwd} ssh -X ${user}@${beta}; ;;
+	    sigma2) sshpass -p ${pwd} ssh -X ${user}@${sigma2}; ;;
+	    sigma3) sshpass -p ${pwd} ssh -X ${user}@${sigma3}; ;;
+        sigma4) sshpass -p ${pwd} ssh -X ${user}@${sigma4}; ;;
+        sigma5) sshpass -p ${pwd} ssh -X ${user}@${sigma5}; ;;
+        sigma6) sshpass -p ${pwd} ssh -X ${user}@${sigma6}; ;;
+        sigma7) sshpass -p ${pwd} ssh -X ${user}@${sigma7}; ;;
+        sigma8) sshpass -p ${pwd} ssh -X ${user}@${sigma8}; ;;
+        sigma9) sshpass -p ${pwd} ssh -X ${user}@${sigma9}; ;;
+        sigma10) sshpass -p ${pwd} ssh -X ${user}@${sigma10}; ;;
+        sigma23) sshpass -p ${pwd} ssh -X ${user}@${sigma23}; ;;
+        sigma24) sshpass -p ${pwd} ssh -X ${user}@${sigma24}; ;;
+        sigma25) sshpass -p ${pwd} ssh -X ${user}@${sigma25}; ;;
+        sigma26) sshpass -p ${pwd} ssh -X ${user}@${sigma26}; ;;
+        sigma27) sshpass -p ${pwd} ssh -X ${user}@${sigma27}; ;;
+        sigma28) sshpass -p ${pwd} ssh -X ${user}@${sigma28}; ;;
+        sigma29) sshpass -p ${pwd} ssh ${user}@${sigma29}; ;;
+        sigma30) sshpass -p ${pwd} ssh -X ${user}@${sigma30}; ;;
+        *) printf "\tUsage:\n\tconnect2 beta\n\tconnect2 sigma[2/3/.../10/23/24/25/.../30]\n\n"; ;;
+   esac;
+
+
+
+

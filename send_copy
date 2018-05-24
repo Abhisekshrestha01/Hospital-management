@@ -1,0 +1,49 @@
+#! /bin/sh
+beta=140.158.130.245;
+sigma2=140.158.130.70;
+sigma3=140.158.130.33;
+sigma4=140.158.131.43;
+sigma5=140.158.130.40;
+sigma6=140.158.130.6;
+sigma7=140.158.130.20;
+sigma8=140.158.131.45;
+sigma9=140.158.130.14;
+sigma10=140.158.131.41;
+sigma23=140.158.131.40;
+sigma24=140.158.130.254;
+sigma25=140.158.130.22;
+sigma26=140.158.131.37;
+sigma27=140.158.130.13;
+sigma28=140.158.130.18;
+sigma29=140.158.130.27;
+sigma30=140.158.131.67;
+
+user=sshrestha22;
+pwd="Suy@sh1stha";
+destination=$1;
+
+case $destination in
+        all)sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma4}:~/Desktop/HospMgmt/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma7}:~/Desktop/HospMgmt/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma8}:~/Desktop/HospMgmt/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma5}:~/Desktop/HospMgmt/; ;;
+
+        backup)sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma4}:~/Desktop/backup/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma7}:~/Desktop/backup/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma8}:~/Desktop/backup/;
+	    sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma30}:~/Desktop/backup/;
+            sshpass -p ${pwd} scp *.csv *.py ${user}@${sigma25}:~/Desktop/backup/; ;;
+
+	config)  sshpass -p ${pwd} scp config.py${user}@${sigma4}:~/Desktop/QQ/;
+	             sshpass -p ${pwd} scp config.py${user}@${sigma7}:~/Desktop/QQ/;
+	             sshpass -p ${pwd} scp config.py${user}@${sigma25}:~/Desktop/QQ/;
+	             sshpass -p ${pwd} scp config.py${user}@${sigma30}:~/Desktop/QQ/;
+	             ;;
+	python)sshpass -p ${pwd} scp install_python${user}@${sigma5}:~/Desktop/;
+		sshpass -p ${pwd} scp install_python${user}@${sigma7}:~/Desktop/;
+		sshpass -p ${pwd} scp install_python${user}@${sigma8}:~/Desktop/;
+		sshpass -p ${pwd} scp install_python${user}@${sigma9}:~/Desktop/;
+		sshpass -p ${pwd} scp install_python${user}@${sigma10}:~/Desktop/; ;;
+        *) printf "\tUsage:\n\tsend_copy [all/backup/config/python]\n\n"; ;;
+   esac;
+

@@ -1,0 +1,7 @@
+user_id,user_type,user_name,password,role
+1001,1,nabin,123,Admin
+1002,1,admin1,123,Admin
+1003,2,doctor1,123,Doctor
+1004,2,doctor2,123,Doctor
+1005,3,staff1,123,Staff
+1006,3,staff2,123,Staff
